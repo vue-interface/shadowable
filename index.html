@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Shadowable</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./dist/Shadowable.css">
+    </head>
+    <body>
+        <div id="app" class="container">
+            <h1>shadowable</h1>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6/dist/vue.js"></script>
+        <script type="text/javascript" src="./dist/Shadowable.umd.js"></script>
+        <script type="text/javascript">
+            
+            const vue = new Vue({
+                el: '#app',
+                mixins: {
+                    Shadowable
+                }
+            });
+        </script>
+    </body>
+</html>
