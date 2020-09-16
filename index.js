@@ -11,7 +11,7 @@ export default {
          */
         shadow: {
             type: String,
-            validate(valu) {
+            validate(value) {
                 return [
                     'shadow-sm',
                     'shadow-md',
