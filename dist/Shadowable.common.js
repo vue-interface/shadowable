@@ -1514,19 +1514,19 @@ function transition(el, defaultValue) {
     /**
      * The shadow size.
      *
-     * @property String
+     * @property {Boolean|String}
      */
     shadow: {
-      type: String,
+      type: [Boolean, String],
       validate: function validate(value) {
-        return ['shadow-sm', 'shadow-md', 'shadow-lg'].indexOf(prefix_prefix(value, this.shadowableClassPrefix)) !== -1;
+        return value === true || ['shadow-sm', 'shadow-lg'].indexOf(prefix_prefix(value, this.shadowableClassPrefix)) !== -1;
       }
     },
 
     /**
      * The shadow class prefix.
      *
-     * @property String
+     * @property {String}
      */
     shadowableClassPrefix: {
       type: String,
@@ -1535,7 +1535,7 @@ function transition(el, defaultValue) {
   },
   computed: {
     shadowableClass: function shadowableClass() {
-      return prefix_prefix(this.shadow, this.shadowableClassPrefix);
+      return this.shadow === true ? this.shadowableClassPrefix : prefix_prefix(this.shadow, this.shadowableClassPrefix);
     }
   }
 });

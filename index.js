@@ -7,14 +7,13 @@ export default {
         /**
          * The shadow size.
          *
-         * @property String
+         * @property {Boolean|String}
          */
         shadow: {
-            type: String,
+            type: [Boolean, String],
             validate(value) {
-                return [
+                return value === true || [
                     'shadow-sm',
-                    'shadow-md',
                     'shadow-lg'
                 ].indexOf(prefix(value, this.shadowableClassPrefix)) !== -1;
             }
@@ -23,7 +22,7 @@ export default {
         /**
          * The shadow class prefix.
          *
-         * @property String
+         * @property {String}
          */
         shadowableClassPrefix: {
             type: String,
@@ -34,7 +33,9 @@ export default {
     computed: {
 
         shadowableClass() {
-            return prefix(this.shadow, this.shadowableClassPrefix);
+            return this.shadow === true
+                ? this.shadowableClassPrefix
+                : prefix(this.shadow, this.shadowableClassPrefix);
         }
 
     }
