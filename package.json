@@ -2,9 +2,8 @@
   "name": "@vue-interface/shadowable",
   "version": "0.9.3",
   "description": "A Vue shadow mixin.",
-  "module": "./index.js",
-  "main": "./dist/Shadowable.umd.js",
-  "unpkg": "./dist/Shadowable.umd.min.js",
+  "main": "index.js",
+  "unpkg": "dist/Shadowable.umd.min.js",
   "scripts": {
     "watch": "npm run serve",
     "serve": "vue-cli-service build --target lib --name=Shadowable ./index.js --watch",
