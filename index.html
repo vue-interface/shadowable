@@ -4,22 +4,100 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Shadowable</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="./dist/Shadowable.css">
     </head>
     <body>
-        <div id="app" class="container">
-            <h1>shadowable</h1>
+        <div id="app" class="container mx-auto">
+            <h1 class="text-4xl mb-6">shadowable</h1>
+
+            <h3 class="mb-3 text-2xl">Box Shadows</h3>
+
+            <div class="flex">
+                <drop-shadow shadow class="flex items-center justify-center w-24 h-24 bg-white p-3 mb-6 mr-3">
+                    default
+                </drop-shadow>
+
+                <drop-shadow shadow="sm" class="flex items-center justify-center w-24 h-24 bg-white p-3 mb-6 mr-3">
+                    sm
+                </drop-shadow>
+
+                <drop-shadow shadow="md" class="flex items-center justify-center w-24 h-24 bg-white p-3 mb-6 mr-3">
+                    md
+                </drop-shadow>
+
+                <drop-shadow shadow="lg" class="flex items-center justify-center w-24 h-24 bg-white p-3 mb-6 mr-3">
+                    lg
+                </drop-shadow>
+
+                <drop-shadow shadow="xl" class="flex items-center justify-center w-24 h-24 bg-white p-3 mb-6 mr-3">
+                    xl
+                </drop-shadow>
+
+                <drop-shadow shadow="2xl" class="flex items-center justify-center w-24 h-24 bg-white p-3 mb-6 mr-3">
+                    2xl
+                </drop-shadow>
+
+                <drop-shadow shadow="inner" class="flex items-center justify-center w-24 h-24 bg-white p-3 mb-6 mr-3">
+                    inner
+                </drop-shadow>
+
+                <drop-shadow shadow="none" class="flex items-center justify-center w-24 h-24 bg-white p-3 mb-6 mr-3">
+                    none
+                </drop-shadow>
+            </div>
+
+            <h3 class="mb-3 mt-6 text-2xl">Drop Shadows</h3>
+
+            <div class="flex">
+                <drop-shadow drop-shadow class="flex items-center justify-center w-24 h-24 bg-white p-3 mb-6 mr-3">
+                    default
+                </drop-shadow>
+                
+                <drop-shadow drop-shadow="sm" class="flex items-center justify-center w-24 h-24 bg-white p-3 mb-6 mr-3">
+                    sm
+                </drop-shadow>
+
+                <drop-shadow drop-shadow="md" class="flex items-center justify-center w-24 h-24 bg-white p-3 mb-6 mr-3">
+                    md
+                </drop-shadow>
+
+                <drop-shadow drop-shadow="lg" class="flex items-center justify-center w-24 h-24 bg-white p-3 mb-6 mr-3">
+                    lg
+                </drop-shadow>
+
+                <drop-shadow drop-shadow="xl" class="flex items-center justify-center w-24 h-24 bg-white p-3 mb-6 mr-3">
+                    xl
+                </drop-shadow>
+
+                <drop-shadow drop-shadow="2xl" class="flex items-center justify-center w-24 h-24 bg-white p-3 mb-6 mr-3">
+                    2xl
+                </drop-shadow>
+
+                <drop-shadow drop-shadow="none" class="flex items-center justify-center w-24 h-24 bg-white p-3 mb-6 mr-3">
+                    none
+                </drop-shadow>
+            </div>
         </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/vue@2.6/dist/vue.js"></script>
-        <script type="text/javascript" src="./dist/Shadowable.umd.js"></script>
-        <script type="text/javascript">
+        <script type="module">
+            import './index.css';
+            import Vue from 'vue/dist/vue';
+            import { Shadowable } from './index.js';
             
+            const DropShadow = Vue.extend({
+                mixins: [
+                    Shadowable
+                ],
+                render(createElement) {
+                    return createElement('div', {
+                        class: [this.dropShadowableClass, this.shadowableClass]
+                    }, this.$slots.default);
+                }
+            });
+
             const vue = new Vue({
                 el: '#app',
-                mixins: {
-                    Shadowable
+                components: {
+                    DropShadow
                 }
             });
         </script>
