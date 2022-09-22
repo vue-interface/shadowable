@@ -35,24 +35,24 @@
   "bugs": {
     "url": "https://github.com/vue-interface/shadowable/issues"
   },
-  "homepage": "https://github.com/vue-interface/shadowable/docs#readme",
-  "dependencies": {
-    "vue": "^2.6.14"
+  "homepage": "https://github.com/vue-interface/shadowable",
+  "peerDependencies": {
+    "vue": "^3.0.0"
   },
   "devDependencies": {
-    "@rollup/plugin-babel": "^5.3.0",
-    "autoprefixer": "^10.4.2",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@vitejs/plugin-vue": "^3.0.3",
+    "autoprefixer": "^10.4.8",
     "babel-eslint": "^10.1.0",
     "babel-preset-vue": "^2.0.2",
     "change-case": "^4.1.2",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
+    "eslint": "^8.22.0",
+    "eslint-plugin-vue": "^9.3.0",
     "pascalcase": "^2.0.0",
     "postcss": "^8.4.6",
     "postcss-functions": "^4.0.2",
-    "postcss-hexrgba": "^2.0.1",
-    "tailwindcss": "^3.0.18",
-    "vite": "^2.7.2",
-    "vite-plugin-vue2": "^1.9.3"
+    "tailwindcss": "^3.1.8",
+    "vite": "^3.0.8",
+    "vue": "^3.2.37"
   }
 }

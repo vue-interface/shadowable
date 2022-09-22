@@ -80,26 +80,26 @@
 
         <script type="module">
             import './index.css';
-            import Vue from 'vue/dist/vue';
+            import { createApp } from 'vue/dist/vue.esm-bundler';
+            import { h } from 'vue';
             import { Shadowable } from './index.js';
             
-            const DropShadow = Vue.extend({
+            const DropShadow = {
                 mixins: [
                     Shadowable
                 ],
-                render(createElement) {
-                    return createElement('div', {
-                        class: [this.dropShadowableClass, this.shadowableClass]
-                    }, this.$slots.default);
+                render() {
+                    return h('div', {
+                        class: [this.shadowableClass]
+                    }, this.$slots.default());
                 }
-            });
+            };
 
-            const vue = new Vue({
-                el: '#app',
+            createApp({
                 components: {
                     DropShadow
                 }
-            });
+            }).mount('#app');
         </script>
     </body>
 </html>
