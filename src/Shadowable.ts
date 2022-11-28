@@ -1,18 +1,19 @@
-export default {
+import { defineComponent } from 'vue';
+
+export default defineComponent({
 
     props: {
 
         /**
          * The drop shadow size.
-         *
-         * @property {Boolean|String}
          */
-        dropShadow: [Boolean, String],
+        dropShadow: {
+            type: [Boolean, String],
+            default: undefined
+        },
         
         /**
          * The shadow class prefix.
-         *
-         * @property {String}
          */
         dropShadowableClassPrefix: {
             type: String,
@@ -21,15 +22,14 @@ export default {
 
         /**
          * The shadow size.
-         *
-         * @property {Boolean|String}
          */
-        shadow: [Boolean, String],
+        shadow: {
+            type: [Boolean, String],
+            default: undefined
+        },
         
         /**
          * The shadow class prefix.
-         *
-         * @property {String}
          */
         shadowableClassPrefix: {
             type: String,
@@ -56,4 +56,4 @@ export default {
 
     }
 
-};
+});
