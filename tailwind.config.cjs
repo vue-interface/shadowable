@@ -7,6 +7,6 @@ module.exports = {
         extend: {},
     },
     safelist:[
-        ...require('./tailwindcss/safelist')()
+        ...require('./tailwindcss/safelist.ts')()
     ]
 };

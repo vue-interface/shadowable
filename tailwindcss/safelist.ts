@@ -1,3 +1,5 @@
 module.exports = () => [
-    /^(drop-)?shadow-.+/
+    {
+        pattern: /^(drop-)?shadow-.+/,
+    }
 ];
