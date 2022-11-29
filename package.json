@@ -16,7 +16,6 @@
       "require": "./dist/shadowable.umd.js",
       "types": "./dist/index.d.ts"
     },
-    "./tailwindcss": "./tailwindcss/index.cjs",
     "./tailwindcss/safelist": "./tailwindcss/safelist.ts"
   },
   "browserslist": "last 2 versions, > 0.5%, ie >= 11",
@@ -46,7 +45,7 @@
   "bugs": {
     "url": "https://github.com/vue-interface/shadowable/issues"
   },
-  "homepage": "https://github.com/vue-interface/shadowable/docs#readme",
+  "homepage": "https://github.com/vue-interface/shadowable",
   "peerDependencies": {
     "vue": "^3.0.0"
   },
