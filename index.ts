@@ -1,4 +1,4 @@
-import Shadowable from "./src/Shadowable";
+import Shadowable from './src/Shadowable';
 
 export {
     Shadowable
